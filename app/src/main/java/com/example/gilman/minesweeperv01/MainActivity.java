@@ -172,6 +172,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnLongClick
         else if(mine.getValue()>0 && !mine.isRevealed){
             mine.setText(mine.getValue()+"");
             mine.isRevealed = true;
+            mine.setEnabled(false);
             //mine.toggleRevealed();
         }
         else if(mine.getValue()==0){
@@ -192,6 +193,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnLongClick
 
                             board[m][n].setText(board[m][n].getValue() + " ");
                             board[m][n].isRevealed = true;
+                            board[m][n].setEnabled(false);
                         }
 
                     //}
